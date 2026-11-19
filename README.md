@@ -4,7 +4,7 @@ The **root page** of `https://hero4mohamed.github.io/`.
 
 ## Why this repository exists
 
-The Android app of İstanbul Ray-Net (a Trusted Web Activity) hides the browser bar only if the **root of the web address** vouches for it, by serving a file at
+The Android app of TurkMaps (a Trusted Web Activity) hides the browser bar only if the **root of the web address** vouches for it, by serving a file at
 
 ```
 https://hero4mohamed.github.io/.well-known/assetlinks.json
@@ -20,7 +20,7 @@ The transit map lives in a *project site* (`/Metro-Istanbul-General-City-Map/`),
 |---|---|
 | `.well-known/assetlinks.json` | The address file. **`[]` (valid, empty) until the app's first upload to Google Play**, then it names the app's package and certificate fingerprints. |
 | `.nojekyll` | An empty file. Without it GitHub's Jekyll step **silently skips folders that start with a dot**, and `.well-known/` would return 404. |
-| `index.html` | A small start page (English + Turkish) pointing to İstanbul Ray-Net and its privacy notice. Today the bare address is a 404. |
+| `index.html` | A small start page (English + Turkish) pointing to TurkMaps and its privacy notice. Today the bare address is a 404. |
 | `404.html` | A plain "page not found" for this root site only. |
 
 Everything is static, has no script, loads nothing from other sites, and contains no personal data.
@@ -46,10 +46,10 @@ You want **`HTTP/2 200`** and a body of `[]`. A `404` means the Pages step has n
 ## After the first upload to Google Play (the address file gets its content)
 
 1. In Play Console open the app, then **App integrity > App signing**, and copy the **SHA-256 certificate fingerprint** of the **app signing key**. (With Play App Signing this is Google's key, not yours.) For builds you install yourself, also take the SHA-256 of your own upload key (`keytool -list -v -keystore <file>`).
-2. In the İstanbul Ray-Net project run (it refuses a SHA-1, a fingerprint with a missing byte, or a bad package name):
+2. In the TurkMaps project run (it refuses a SHA-1, a fingerprint with a missing byte, or a bad package name):
 
    ```bash
-   node transit_data/play/make-assetlinks.cjs io.github.hero4mohamed.raynet <SHA-256 of Google's key> <SHA-256 of your upload key> --out <path to this folder>/.well-known/assetlinks.json
+   node transit_data/play/make-assetlinks.cjs io.github.hero4mohamed.turkmaps <SHA-256 of Google's key> <SHA-256 of your upload key> --out <path to this folder>/.well-known/assetlinks.json
    ```
 
    (Replace the package name if you chose another one in the build step; it must match the app exactly.)

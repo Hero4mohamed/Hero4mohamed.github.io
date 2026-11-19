@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.hero4mohamed.turkmaps",
+      "sha256_cert_fingerprints": [
+        "CF:08:30:AD:24:92:B5:B7:FB:14:87:F0:C0:0A:F0:D4:41:36:B0:3E:5C:B3:3D:C7:44:1D:5E:58:84:21:73:76",
+        "26:36:C8:21:DB:D5:F5:3B:D3:0D:50:D0:33:C8:22:E3:23:37:F3:E0:55:65:64:39:E1:51:71:13:ED:FC:BB:F8",
+        "22:13:EC:FA:79:E9:03:50:56:C0:D3:C9:91:6D:9C:A9:FA:C3:FE:01:EF:BE:C7:B0:CC:55:D5:96:DC:3C:34:2B"
+      ]
+    }
+  }
+]
